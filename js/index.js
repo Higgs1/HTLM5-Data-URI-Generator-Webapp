@@ -101,10 +101,10 @@ $(function() {
   // fake file input is clicked
   $("#fakefile *").click(function() {
     $("#realfileinput").click();
-  );
+  });
   
   // file is selected using file input form
-	$("#realfileinput").on("change", function() {
+  $("#realfileinput").on("change", function() {
     //TODO work
   });
 });
