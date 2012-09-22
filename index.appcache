@@ -1,5 +1,7 @@
 CACHE MANIFEST
 
+# version 0.0.1
+
 CACHE:
 css/bootstrap.css
 css/bootstrap-responsive.css
@@ -13,6 +15,5 @@ js/jquery.js
 js/mimetypes.js
 js/select.js
 js/utf8.js
-index.appcache
 index.html
 index.webapp

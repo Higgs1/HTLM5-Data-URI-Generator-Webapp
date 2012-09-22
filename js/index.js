@@ -96,4 +96,9 @@ $(function() {
     $("#textbytelen").text(cache.utf8str.length);
     updatedatauri();
   }).keyup();
+  
+  // fake file input is clicked
+  $("#fakefile *").click(function() {
+    $("#realfileinput").click();
+  );
 });
