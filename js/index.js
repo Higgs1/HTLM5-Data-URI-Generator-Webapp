@@ -7,6 +7,13 @@ $(function() {
     "mimetype" : "",  // automatically detected mime type for file upload
   }
   
+  // set tab to the tab that was selected before
+  var oldtab = $("#inputmethodl").val()
+  if (oldtab) {
+    $("#inputmethod li a[href=" + oldtab + "]").tab("show");
+    cache.seltab = oldtab;
+  }
+  
   // return the selected mime type
   var getmimetype = function() {
     switch ($("input[name=mimetypesel]:checked").val()) {
@@ -16,13 +23,6 @@ $(function() {
         return cache.seltab == "#textinput" ? "text/plain;charset=utf-8" : cache.mimetype;
     }
     return "";
-  }
-  
-  // set tab to the tab that was selected before
-  var oldtab = $("#inputmethodl").val()
-  if (oldtab) {
-    $("#inputmethod li a[href=" + oldtab + "]").tab("show");
-    cache.seltab = oldtab;
   }
   
   var updatedatauri = function() {
@@ -67,6 +67,7 @@ $(function() {
     $("input[name=mimetypesel][value=auto]").prop("checked", true)
     $("#mimetypeinpt").hide();
     $("#mimetype").val("");
+    //TODO clear file
   });
   
   // the manual mime type input is changed
@@ -101,4 +102,9 @@ $(function() {
   $("#fakefile *").click(function() {
     $("#realfileinput").click();
   );
+  
+  // file is selected using file input form
+	$("#realfileinput").on("change", function() {
+    //TODO work
+  });
 });
