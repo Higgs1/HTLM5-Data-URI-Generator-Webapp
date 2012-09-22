@@ -3,9 +3,10 @@ CACHE MANIFEST
 CACHE:
 css/bootstrap.css
 css/bootstrap-responsive.css
-img/favicon-16.png
 img/glyphicons-halflings.png
 img/glyphicons-halflings-white.png
+img/icon-16.png
+img/icon-128.png
 js/bootstrap.js
 js/index.js
 js/jquery.js
