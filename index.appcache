@@ -13,6 +13,6 @@ js/jquery.js
 js/mimetypes.js
 js/select.js
 js/utf8.js
-cache.manifest
+index.appcache
 index.html
 index.webapp
