@@ -4,14 +4,14 @@
   "launch_path": "/",
   "icons": {
     "16" : "/img/icon-16.png",
-    "128": "/img/icon-128.png",
+    "128": "/img/icon-128.png"
   },
   "developer": {
     "name": "Nathan Lex",
-    "url" : "https://profiles.google.com/110551984242209573919",
+    "url" : "https://profiles.google.com/110551984242209573919"
   },
   "default_locale": "en",
   "installs_allowed_from": ["*"],
   "version": "0.0.1",
-  "appcache_path": "/cache.manifest",
+  "appcache_path": "/cache.manifest"
 }
