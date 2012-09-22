@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"manifest="cache.manifest">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Data URI Generator (HTML5 App Demo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        margin: 20px 0px;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="icon" href="img/favicon-16.png" type="image/png" sizes="16x16">
+
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-144-precomposed.png" sizes="144x144">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-114-precomposed.png" sizes="114x114">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-72-precomposed.png"  sizes="72x72"  >
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"                 >
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  </head>
+
+  <body>
+    <div id="main" class="container-fluid">
+      <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span5">
+          <div class="well">
+            <ul class="nav nav-tabs" id="inputmethod">
+              <li class="active"><a href="#fileupload" data-toggle="tab">Upload File</a></li>
+              <li><a href="#textinput" data-toggle="tab">Input Text</a></li>
+            </ul>
+            <div class="tab-content" style="overflow: visible;">
+              <div class="tab-pane active" id="fileupload">
+                <div class="well">
+                  Browse for a file:
+                  <div class="input-append" style="margin-right: 90px;">
+                    <input style="width: 100%;" id="fakefileinput" type="text" readonly>
+                    <button id="fakefilebtn" class="btn" type="button">Browse</button>
+                  </div>
+                  <br>
+                  Or drag and drop file here.
+                </div>
+              </div>
+              <div class="tab-pane" id="textinput" style="margin-right: 14px; padding-right: 0px;">
+                <textarea id="text" rows="4" style="width: 100%; resize: vertical;"></textarea>
+                <div class="row-fluid">
+                  <div class="span6">
+                    Character length: <span id="textcharlen">0</span>
+                  </div>
+                  <div class="span6">
+                    Byte length: <span id="textbytelen">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="well">
+            <fieldset>
+              <legend>Options</legend>
+            </fieldset>
+            <label class="checkbox">
+              <input type="checkbox" id="base64" checked> Base 64 encode data
+            </label>
+            <br>
+            <label class="radio">
+              <input type="radio" name="mimetypesel" value="auto" checked>
+              Allow User Agent to specify MIME type
+            </label>
+            <label class="radio">
+              <input type="radio" name="mimetypesel" value="inpt">
+              Explicitly specify MIME type
+            </label>
+            <label class="radio">
+              <input type="radio" name="mimetypesel" value="none">
+              Leave MIME type blank
+            </label>
+            <br>
+            <label id="mimetypeinpt">
+              MIME Type <br>
+              <input type="text" id="mimetype" placeholder="Enter MIME type here" data-provide="typeahead">
+            </label>
+          </div>
+        </div>
+        <div class="span5">
+          <div class="well">
+            <fieldset>
+              <legend>Data URI</legend>
+            </fieldset>
+            <div style="margin-right: 14px; padding-right: 0px;">
+              <div class="uneditable-input" id="datauri" style="width: 100%; resize: vertical; height: 20em; word-wrap: break-word; white-space: pre-wrap; overflow: auto;"> </div>
+            </div>
+            <button type="button" id="btn_selall" class="btn btn-primary">Select All</button>
+            <button type="button" id="btn_reset" class="btn pull-right">Reset Form</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="scripts" style="display: none;">
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      
+      <script src="js/mimetypes.js"></script>
+      <script src="js/select.js"></script>
+      <script src="js/utf8.js"></script>
+      <script src="js/index.js"></script>
+      <input type="hidden" id="inputmethodl">
+    </div>
+  </body>
+</html>
