@@ -1,4 +1,7 @@
 $(function() {
+  // erase fake file input
+  $("#fakefileinput").val("");
+  
   // cache javascript results to avoid extra prosessing
   var cache = {
     "seltab"   : "",  // currently selected tab
@@ -103,8 +106,55 @@ $(function() {
     $("#realfileinput").click();
   });
   
+  // do not perform the default event action
+	var noop = function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  
+  // file has been read by file reader
+  var filereader = new FileReader();
+  filereader.onload = function (e) {
+    cache.datastr = this.result;
+    updatedatauri();
+  };
+  
+  // a file has been selected
+  var updatefiledata = function(file) {
+    $("#fakefileinput").val(file.name);
+    filereader.readAsDataURL(file);
+  }
+  
   // file is selected using file input form
   $("#realfileinput").on("change", function() {
-    //TODO work
+    updatefiledata(this.files[0]);
+  });
+  
+  // file dnd events
+  var dndclass = "dnd_hover";
+  var dndstop = function(e) {
+    var related = e.relatedTarget, inside = false;
+    if (related !== this) {
+      if (related) {
+        inside = $.contains(this, related);
+      }
+      if (!inside) {
+        noop(e);
+        $("#filednd").removeClass(dndclass);
+      }
+    }
+  }
+  $("#filednd").on({
+    "dragenter" : function(e) {
+      noop(e);
+      $("#filednd").addClass(dndclass);
+    },
+    "dragover" : noop,
+    "dragleave" : dndstop,
+    "dragend" : dndstop,
+    "drop" : function(e) {
+      dndstop(e);
+      updatefiledata(e.originalEvent.dataTransfer.files[0]);
+    }
   });
 });
