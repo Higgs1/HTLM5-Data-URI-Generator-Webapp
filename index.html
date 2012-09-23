@@ -74,28 +74,28 @@
           <div class="well">
             <fieldset>
               <legend>Options</legend>
+              <label class="checkbox">
+                <input type="checkbox" id="base64" checked> Base 64 encode data
+              </label>
+              <br>
+              <label class="radio">
+                <input type="radio" name="mimetypesel" value="auto" checked>
+                Allow User Agent to specify MIME type
+              </label>
+              <label class="radio">
+                <input type="radio" name="mimetypesel" value="inpt">
+                Explicitly specify MIME type
+              </label>
+              <label class="radio">
+                <input type="radio" name="mimetypesel" value="none">
+                Leave MIME type blank
+              </label>
+              <br>
+              <label id="mimetypeinpt">
+                MIME Type <br>
+                <input type="text" id="mimetype" placeholder="Enter MIME type here" data-provide="typeahead">
+              </label>
             </fieldset>
-            <label class="checkbox">
-              <input type="checkbox" id="base64" checked> Base 64 encode data
-            </label>
-            <br>
-            <label class="radio">
-              <input type="radio" name="mimetypesel" value="auto" checked>
-              Allow User Agent to specify MIME type
-            </label>
-            <label class="radio">
-              <input type="radio" name="mimetypesel" value="inpt">
-              Explicitly specify MIME type
-            </label>
-            <label class="radio">
-              <input type="radio" name="mimetypesel" value="none">
-              Leave MIME type blank
-            </label>
-            <br>
-            <label id="mimetypeinpt">
-              MIME Type <br>
-              <input type="text" id="mimetype" placeholder="Enter MIME type here" data-provide="typeahead">
-            </label>
           </div>
         </div>
         <div class="span5">

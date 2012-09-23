@@ -37,13 +37,17 @@ $(function() {
     switch (cache.seltab) {
       case "#textinput":
         if (b64) {
-          // yes, the semicolon is always present, even when the mimetype in blank
           datauri += btoa(cache.utf8str); 
         } else {
           datauri += encodeURIComponent($("#text").val()); 
         }
         break;
       case "#fileupload":
+        if (b64) {
+          datauri += cache.datastr;
+        } else {
+          
+        }
         break;
     }
     
@@ -107,7 +111,7 @@ $(function() {
   });
   
   // do not perform the default event action
-	var noop = function(e) {
+  var noop = function(e) {
     e.stopPropagation();
     e.preventDefault();
   }
@@ -115,7 +119,9 @@ $(function() {
   // file has been read by file reader
   var filereader = new FileReader();
   filereader.onload = function (e) {
-    cache.datastr = this.result;
+    var rdup = this.result.split(",");
+    cache.datastr = rdup[1];
+    cache.mimetype = rdup[0].split(";")[0].split(":")[1]
     updatedatauri();
   };
   
