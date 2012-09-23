@@ -1,10 +1,17 @@
 CACHE MANIFEST
 
-#version 0.0.20
+#version 0.0.21
 
 CACHE:
 css/bootstrap.css
 css/bootstrap-responsive.css
+css/font-awesome.css
+css/index.css
+css/normalize.css
+font/fontawesome-webfont.eot
+font/fontawesome-webfont.svg
+font/fontawesome-webfont.ttf
+font/fontawesome-webfont.woff
 img/glyphicons-halflings.png
 img/glyphicons-halflings-white.png
 img/icon-16.png
