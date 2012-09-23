@@ -15,6 +15,8 @@ $(function() {
   if (oldtab) {
     $("#inputmethod li a[href=" + oldtab + "]").tab("show");
     cache.seltab = oldtab;
+  } else {
+    cache.seltab = "#fileupload";
   }
   
   // return the selected mime type
@@ -111,6 +113,7 @@ $(function() {
   // file has been read by file reader
   var filereader = new FileReader();
   filereader.onload = function (e) {
+    //TODO does not work with text files because mime type has an extra delimiter
     var rdup = this.result.split(",");
     cache.datastr = rdup[1];
     cache.mimetype = rdup[0].split(";")[0].split(":")[1];
