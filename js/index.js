@@ -36,18 +36,10 @@ $(function() {
     
     switch (cache.seltab) {
       case "#textinput":
-        if (b64) {
-          datauri += btoa(cache.utf8str); 
-        } else {
-          datauri += encodeURIComponent($("#text").val()); 
-        }
+        datauri += b64 ? btoa(cache.utf8str) : encodeURIComponent($("#text").val()); 
         break;
       case "#fileupload":
-        if (b64) {
-          datauri += cache.datastr;
-        } else {
-          
-        }
+        datauri += b64 ? cache.datastr : escape(atob(cache.datastr));
         break;
     }
     
@@ -121,7 +113,7 @@ $(function() {
   filereader.onload = function (e) {
     var rdup = this.result.split(",");
     cache.datastr = rdup[1];
-    cache.mimetype = rdup[0].split(";")[0].split(":")[1]
+    cache.mimetype = rdup[0].split(";")[0].split(":")[1];
     updatedatauri();
   };
   
