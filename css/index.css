@@ -14,3 +14,10 @@ body {
   width: 100%;
   word-wrap: break-word;
 }
+
+@media (min-width: 768px) {
+  #datauridiv2 {
+    margin-right: 14px;
+    padding-right: 0px;
+  }
+}
