@@ -5,3 +5,12 @@ body {
 .dnd_hover {
   background-color: #E3E3E3;
 }
+
+#datauridiv {
+  height: 20em;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre-wrap;
+  width: 100%;
+  word-wrap: break-word;
+}
