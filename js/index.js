@@ -45,7 +45,7 @@ $(function() {
         break;
     }
     
-    $("#datauri").attr("href", datauri).attr("download", $("#fakefileinput").val()).text(datauri);
+    $("#datauri").attr("href", datauri).text(datauri);
   }
   
   // initialize mime type input typeahead with the mime types list in mimetypes.js

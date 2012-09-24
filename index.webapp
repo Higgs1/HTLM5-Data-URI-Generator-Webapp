@@ -12,6 +12,6 @@
   },
   "default_locale": "en",
   "installs_allowed_from": ["*"],
-  "version": "0.0.21",
+  "version": "0.0.22",
   "appcache_path": "/index.appcache"
 }
