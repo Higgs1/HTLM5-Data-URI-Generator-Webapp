@@ -64,11 +64,15 @@ $(function() {
 
   // reset button is clicked
   $("#btn_reset").click(function() {
+    cache.utf8str = "";
+    cache.datastr = "";
+    cache.mimetype = "";
+    $("#fakefileinput").val("");
+    $("#textinput textarea").val("");
     $("#base64").prop("checked", true);
     $("input[name=mimetypesel][value=auto]").prop("checked", true)
     $("#mimetypeinpt").hide();
     $("#mimetype").val("");
-    //TODO clear file
   });
   
   // the manual mime type input is changed
