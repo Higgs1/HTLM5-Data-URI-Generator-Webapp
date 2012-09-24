@@ -73,6 +73,7 @@ $(function() {
     $("input[name=mimetypesel][value=auto]").prop("checked", true)
     $("#mimetypeinpt").hide();
     $("#mimetype").val("");
+    updatedatauri();
   });
   
   // the manual mime type input is changed
