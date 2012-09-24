@@ -45,7 +45,7 @@ $(function() {
         break;
     }
     
-    $("#datauri").html("<a href=\"" + datauri + "\" target=\"_blank\" download=\"" + $("#fakefileinput").val() + "\" title=\"Click to open the data URI in a new window.\">" + datauri + "</a>");
+    $("#datauri").attr("href", datauri).attr("download", $("#fakefileinput").val()).text(datauri);
   }
   
   // initialize mime type input typeahead with the mime types list in mimetypes.js
