@@ -30,6 +30,7 @@ Things I'd like to implement in the future.
 * Select tab using URL hash
 * Font awesome
 * Test for iPhone support (could somebody with an iPhone help me with this?)
+* JavaScript modules
 
 Included Software
 -----------------
