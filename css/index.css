@@ -1,0 +1,23 @@
+body {
+  margin: 20px 0px;
+}
+
+.dnd_hover {
+  background-color: #E3E3E3;
+}
+
+#datauridiv {
+  height: 20em;
+  overflow: auto;
+  resize: vertical;
+  white-space: pre-wrap;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  #datauridiv2 {
+    margin-right: 14px;
+    padding-right: 0px;
+  }
+}
