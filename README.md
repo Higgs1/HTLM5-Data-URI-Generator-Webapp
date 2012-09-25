@@ -7,9 +7,9 @@ Features
 --------
 More or less a list of things I was experimenting with.
 * Twitter Bootstrap
-* * Responsive design
-* * Tabs
-* * Autocomplete
+	* Responsive design
+	* Tabs
+	* Autocomplete
 * Selecting an element with JavaScript
 * File reader API
 * HTML5 drag and drop
