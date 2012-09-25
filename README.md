@@ -18,6 +18,7 @@ More or less a list of things I was experimenting with.
 * jQuery
 * Selecting an element with JavaScript
 * Converting data to a data URI
+* Hosting on GitHub
 
 Planned Features
 ----------------
