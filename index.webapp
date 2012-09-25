@@ -4,6 +4,7 @@
   "launch_path": "/",
   "icons": {
     "16" : "/img/icon-16.png",
+    "57" : "/img/icon-57.png",
     "128": "/img/icon-128.png"
   },
   "developer": {
