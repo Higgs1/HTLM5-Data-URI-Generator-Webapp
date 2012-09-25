@@ -67,6 +67,7 @@ $(function() {
     cache.utf8str = "";
     cache.datastr = "";
     cache.mimetype = "";
+    $("#fileinfo").hide();
     $("#fakefileinput").val("");
     $("#textinput textarea").val("");
     $("#base64").prop("checked", true);
@@ -121,13 +122,24 @@ $(function() {
     //TODO does not work with text files because mime type has an extra delimiter
     var rdup = this.result.split(",");
     cache.datastr = rdup[1];
-    cache.mimetype = rdup[0].split(";")[0].split(":")[1];
+    $("#mimetypedisp").text(cache.mimetype = rdup[0].split(";")[0].split(":")[1]);
+    $("#fileinfo").show();
     updatedatauri();
+  };
+  
+  // Humanize byte length
+  var formatsize = function(bytes) {
+    var dec = Math.pow(10, 2);
+    var sizes = ['B', 'KiB', 'MiB', 'GiB', 'TiB'];
+    if (bytes == 0) return '0';
+    var i = parseInt(Math.floor(Math.log(bytes)/Math.log(1024)));
+    return Math.round((bytes/Math.pow(1024,i))*dec)/dec+""+sizes[i];
   };
   
   // a file has been selected
   var updatefiledata = function(file) {
     $("#fakefileinput").val(file.name);
+    $("#filesizedisp").text(formatsize(file.size));
     filereader.readAsDataURL(file);
   }
   
