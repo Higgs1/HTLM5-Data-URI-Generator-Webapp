@@ -134,7 +134,7 @@ $(function() {
     if (bytes == 0) return '0';
     var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
     var output = Math.round((bytes/Math.pow(1024, i)) * dec) / dec + " " + sizes[i];
-    if (i > 0) return output += " (" + new String(bytes).match(/.{1,3}/g).join(",") + " bytes)"; else return output;
+    if (i > 0) return output += " (" + bytes + " bytes)"; else return output;
   };
   
   // a file has been selected
