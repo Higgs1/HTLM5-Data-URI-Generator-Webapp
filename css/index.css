@@ -7,7 +7,7 @@ body {
 }
 
 #datauridiv {
-  height: 20em;
+  height: 24em;
   overflow: auto;
   resize: vertical;
   white-space: pre-wrap;
