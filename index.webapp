@@ -4,7 +4,10 @@
   "launch_path": "/",
   "icons": {
     "16" : "/img/icon-16.png",
+    "32" : "/img/icon-32.png",
     "57" : "/img/icon-57.png",
+    "64" : "/img/icon-64.png",
+    "106": "/img/icon-106.png",
     "128": "/img/icon-128.png"
   },
   "developer": {
@@ -13,6 +16,6 @@
   },
   "default_locale": "en",
   "installs_allowed_from": ["*"],
-  "version": "0.9.1",
+  "version": "0.9.2",
   "appcache_path": "/index.appcache"
 }

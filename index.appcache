@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#version 0.9.1
+#version 0.9.2
 
 CACHE:
 css/bootstrap.css
@@ -10,8 +10,12 @@ css/normalize.css
 img/glyphicons-halflings.png
 img/glyphicons-halflings-white.png
 img/icon-16.png
+img/icon-32.png
 img/icon-57.png
+img/icon-64.png
+img/icon-106.png
 img/icon-128.png
+img/icon-150x130.png
 js/bootstrap.js
 js/index.js
 js/jquery.js
