@@ -35,9 +35,9 @@ Things I'd like to implement in the future.
 Included Software
 -----------------
 Other people's software that I included in this app.
-* Twitter Bootstrap http://twitter.github.com/bootstrap/      Apache License v2
-* jQuery            http://jquery.com/                        MIT License
-* Normalize         http://necolas.github.com/normalize.css/  MIT License
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (Apache License v2)
+* [jQuery](http://jquery.com/)                              (MIT License)
+* [Normalize](http://necolas.github.com/normalize.css/)     (MIT License)
 
 License
 -------
