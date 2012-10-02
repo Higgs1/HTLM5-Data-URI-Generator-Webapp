@@ -1,5 +1,6 @@
 body {
-  margin: 20px 0px;
+  font-family: Ubuntu, sans-serif;
+  margin-top: 20px;
 }
 
 .dnd_hover {
@@ -7,6 +8,7 @@ body {
 }
 
 #datauridiv {
+  font-family: "Ubuntu Mono", monospace;
   height: 24em;
   overflow: auto;
   resize: vertical;
