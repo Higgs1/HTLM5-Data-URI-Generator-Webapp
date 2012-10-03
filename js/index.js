@@ -1,3 +1,4 @@
+// vim: autoindent expandtab filetype=js shiftwidth=2 softtabstop=2 tabstop=2
 $(function() {
   // erase fake file input
   $("#fakefileinput").val("");
