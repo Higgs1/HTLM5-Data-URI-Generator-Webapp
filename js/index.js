@@ -8,7 +8,7 @@ $(function() {
     "seltab"   : "",  // currently selected tab
     "utf8str"  : "",  // the utf8 encoded string for text input
     "datastr"  : "",  // the encoded data in base64 for the file upload
-    "mimetype" : "",  // automatically detected mime type for file upload
+    "mimetype" : ""   // automatically detected mime type for file upload
   }
   
   // set tab to the tab that was selected before
@@ -27,8 +27,9 @@ $(function() {
         return $("#mimetype").val();
       case "auto":
         return cache.seltab == "#textinput" ? "text/plain;charset=utf-8" : cache.mimetype;
+      default:
+        return "";
     }
-    return "";
   }
   
   var updatedatauri = function() {
@@ -50,7 +51,7 @@ $(function() {
   }
   
   // initialize mime type input typeahead with the mime types list in mimetypes.js
-  $("#mimetype").typeahead({"source": mimetypes, "items" : 8,});
+  $("#mimetype").typeahead({"source": mimetypes, "items" : 8});
   
   // mime type input method is changed
   $("input[name=mimetypesel]").change(function() {
@@ -65,16 +66,11 @@ $(function() {
 
   // reset button is clicked
   $("#btn_reset").click(function() {
-    cache.utf8str = "";
-    cache.datastr = "";
-    cache.mimetype = "";
-    $("#fileinfo").hide();
-    $("#fakefileinput").val("");
-    $("#textinput textarea").val("");
+    cache.utf8str = cache.datastr = cache.mimetype = "";
+    $("#fileinfo, #mimetype, #mimetypeinpt").hide();
+    $("#textinput textarea, #fakefileinput").val("");
     $("#base64").prop("checked", true);
-    $("input[name=mimetypesel][value=auto]").prop("checked", true)
-    $("#mimetypeinpt").hide();
-    $("#mimetype").val("");
+    $("input[name=mimetypesel][value=auto]").prop("checked", true);
     updatedatauri();
   });
   
@@ -89,8 +85,7 @@ $(function() {
   
   // tab is switched
   $("#inputmethod a").on("shown", function(evt) {
-    cache.seltab = $("#inputmethod li.active a").attr("href");
-    $("#inputmethodl").val(cache.seltab);
+    $("#inputmethodl").val(cache.seltab = $("#inputmethod li.active a").attr("href"));
     updatedatauri();
   });
   
@@ -110,12 +105,6 @@ $(function() {
   $("#fakefile *").click(function() {
     $("#realfileinput").click();
   });
-  
-  // do not perform the default event action
-  var noop = function(e) {
-    e.stopPropagation();
-    e.preventDefault();
-  }
   
   // file has been read by file reader
   var filereader = new FileReader();
@@ -150,24 +139,25 @@ $(function() {
     updatefiledata(this.files[0]);
   });
   
-  // file dnd events
-  var dndclass = "dnd_hover";
+  // do not perform the default event action
+  var noop = function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  
+  // helper function to remove dnd hover class
   var dndstop = function(e) {
-    var related = e.relatedTarget, inside = false;
-    if (related !== this) {
-      if (related) {
-        inside = $.contains(this, related);
-      }
-      if (!inside) {
-        noop(e);
-        $("#filednd").removeClass(dndclass);
-      }
+    if (e.relatedTarget !== this && e.relatedTarget ? !$.contains(this, e.relatedTarget) : true) {
+      noop(e);
+      $("#filednd").removeClass("dnd_hover");
     }
   }
+  
+  // file dnd events
   $("#filednd").on({
     "dragenter" : function(e) {
       noop(e);
-      $("#filednd").addClass(dndclass);
+      $("#filednd").addClass("dnd_hover");
     },
     "dragover" : noop,
     "dragleave" : dndstop,
