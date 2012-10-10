@@ -1,4 +1,4 @@
-function selectNode(objId) {
+var selectNode = function(objId) {
   deselectNode();
   if (document.selection) {
     var range = document.body.createTextRange();
@@ -11,7 +11,7 @@ function selectNode(objId) {
     window.getSelection().addRange(range);
   }
 }
-function deselectNode() {
+var deselectNode = function() {
   if (document.selection)
     document.selection.empty(); 
   else if (window.getSelection)

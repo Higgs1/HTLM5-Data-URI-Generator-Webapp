@@ -16,7 +16,7 @@
 
 // Converts a raw javascript string into a string of single byte characters using utf8 encoding.
 // This makes it easier to perform other encoding operations on the string.
-rstr2utf8 = function (input) {
+var rstr2utf8 = function (input) {
     var output = "";
 
     for (var n = 0; n < input.length; n++) {
@@ -38,7 +38,7 @@ rstr2utf8 = function (input) {
 }
 
 // Does the reverse of rstr2utf8.
-utf82rstr = function (input) {
+var utf82rstr = function (input) {
     var output = "", i = 0, c = c1 = c2 = 0;
 
     while (i < input.length) {
