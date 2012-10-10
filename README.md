@@ -5,6 +5,10 @@ A simple HTML5 webapp demonstration that allows you to create a data uri either 
 
 [Click here to view app.](http://higgs1.github.com/HTLM5-Data-URI-Generator-Webapp/)
 
+Download
+[Source (ZIP)](/Higgs1/HTLM5-Data-URI-Generator-Webapp/zipball/source)
+[Compiled (ZIP)](/Higgs1/HTLM5-Data-URI-Generator-Webapp/zipball/gh-pages)
+
 Features
 --------
 More or less a list of things I was experimenting with.
