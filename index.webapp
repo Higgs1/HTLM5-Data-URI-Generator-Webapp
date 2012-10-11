@@ -1,14 +1,14 @@
 {
   "name": "Data URI Generator",
   "description": "Generate data uris of files or text.",
-  "launch_path": "/",
+  "launch_path": "/HTLM5-Data-URI-Generator-Webapp/",
   "icons": {
-    "16" : "/img/icon-16.png",
-    "32" : "/img/icon-32.png",
-    "57" : "/img/icon-57.png",
-    "64" : "/img/icon-64.png",
-    "106": "/img/icon-106.png",
-    "128": "/img/icon-128.png"
+    "16" : "/HTLM5-Data-URI-Generator-Webapp/img/icon-16.png",
+    "32" : "/HTLM5-Data-URI-Generator-Webapp/img/icon-32.png",
+    "57" : "/HTLM5-Data-URI-Generator-Webapp/img/icon-57.png",
+    "64" : "/HTLM5-Data-URI-Generator-Webapp/img/icon-64.png",
+    "106": "/HTLM5-Data-URI-Generator-Webapp/img/icon-106.png",
+    "128": "/HTLM5-Data-URI-Generator-Webapp/img/icon-128.png"
   },
   "developer": {
     "name": "Nathan Lex",
@@ -17,5 +17,5 @@
   "default_locale": "en",
   "installs_allowed_from": ["*"],
   "version": "0.9.6",
-  "appcache_path": "/index.appcache"
+  "appcache_path": "/HTLM5-Data-URI-Generator-Webapp/index.appcache"
 }
