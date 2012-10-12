@@ -10,6 +10,7 @@
     "106": "/HTLM5-Data-URI-Generator-Webapp/img/icon-106.png",
     "128": "/HTLM5-Data-URI-Generator-Webapp/img/icon-128.png"
   },
+  "type": "web",
   "developer": {
     "name": "Nathan Lex",
     "url" : "https://profiles.google.com/110551984242209573919"
