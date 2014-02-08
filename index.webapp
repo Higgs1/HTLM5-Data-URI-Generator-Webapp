@@ -17,6 +17,6 @@
   },
   "default_locale": "en",
   "installs_allowed_from": ["*"],
-  "version": "0.9.6",
+  "version": "14.2",
   "appcache_path": "/HTML5-Data-URI-Generator-Webapp/index.appcache"
 }
