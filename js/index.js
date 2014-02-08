@@ -95,10 +95,8 @@ $(function() {
   // text input is modified
   $("#text").keyup(function() {
     cache.utf8str = "";
-    for(var text = $("#text").val(), d = 0; d < text.length; d++) {
-      var c = text.charCodeAt(d);
-      128 > c ?cache.utf8str += String.fromCharCode(c) : (127 < c && 2048 > c ? cache.utf8str += String.fromCharCode(c >> 6 | 192) : (cache.utf8str += String.fromCharCode(c >> 12 | 224), cache.utf8str += String.fromCharCode(c >> 6 & 63 | 128)), cache.utf8str += String.fromCharCode(c & 63 | 128));
-    }
+    for(var text = $("#text").val(), c = 0, d = 0; c = text.charCodeAt(d), d < text.length; d++)
+      128 > c ? cache.utf8str += String.fromCharCode(c) : (127 < c && 2048 > c ? cache.utf8str += String.fromCharCode(c >> 6 | 192) : (cache.utf8str += String.fromCharCode(c >> 12 | 224), cache.utf8str += String.fromCharCode(c >> 6 & 63 | 128)), cache.utf8str += String.fromCharCode(c & 63 | 128));
     $("#textcharlen").text(text.length);
     $("#textbytelen").text(cache.utf8str.length);
     updatedatauri();
