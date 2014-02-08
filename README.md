@@ -4,7 +4,7 @@ HTLM5 Data URI Generator Webapp
 A simple HTML5 webapp demonstration that allows you to create a data uri either from a file or by entering in text.
 
 [Click here to view app.](http://higgs1.github.com/HTML5-Data-URI-Generator-Webapp/)
-[Download (ZIP)](/Higgs1/HTML5-Data-URI-Generator-Webapp/zipball/gh-pages)
+[Download (ZIP)](http://higgs1.github.com/Higgs1/HTML5-Data-URI-Generator-Webapp/zipball/gh-pages)
 
 Features
 --------
