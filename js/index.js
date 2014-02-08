@@ -77,9 +77,8 @@ $(function() {
   // the manual mime type input is changed
   var mimetypechanged = function() {
     // update the data uri only if the manual option is chosen
-    if ($("input[name=mimetypesel][value=inpt]").is(":checked")) {
+    if ($("input[name=mimetypesel][value=inpt]").is(":checked"))
       updatedatauri();
-    }
   }
   $("#mimetype").keyup(mimetypechanged).change(mimetypechanged);
   
@@ -124,7 +123,7 @@ $(function() {
   var formatsize = function(bytes) {
     if (bytes == 0) return '0';
     var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024))),
-        output = Math.round((bytes/Math.pow(1024, i)) * dec) / dec + " " + byteunits[i];
+      output = Math.round((bytes/Math.pow(1024, i)) * dec) / dec + " " + byteunits[i];
     return i > 0 ? output + " (" + bytes + " " + byteunits[0] + ")": output;
   };
   
