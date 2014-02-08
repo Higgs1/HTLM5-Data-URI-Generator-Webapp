@@ -125,9 +125,9 @@ $(function() {
   var byteunits = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB'];
   var formatsize = function(bytes) {
     if (bytes == 0) return '0';
-    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-    var output = Math.round((bytes/Math.pow(1024, i)) * dec) / dec + " " + byteunits[i];
-    if (i > 0) return output += " (" + bytes + " bytes)"; else return output;
+    var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024))),
+        output = Math.round((bytes/Math.pow(1024, i)) * dec) / dec + " " + byteunits[i];
+    return i > 0 ? output + " (" + bytes + " " + byteunits[0] + ")": output;
   };
   
   // a file has been selected
